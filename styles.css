@@ -1,0 +1,211 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid black;
+    background-color: #d8fa8a;
+}
+
+.search {
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2%;
+    border: #000000 1px solid;
+    border-radius: 25px;
+    background-color: #d8fa8a;
+    padding: 15px;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+
+}
+
+.description-section {
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+}
+
+.file-selector {
+    width: 17%;
+
+}
+
+label.label input[type="file"] {
+    position: absolute;
+    top: -1000px;
+}
+
+.label {
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px;
+    background: #f4f4f4;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.label:hover {
+    background: #5cbd95;
+}
+
+.label:active {
+    background: #9fa1a0;
+}
+
+.label:invalid+span {
+    color: #000000;
+}
+
+.label:valid+span {
+    color: #ffffff;
+}
+
+.data-input{
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border: 1px #000000 solid;
+    border-radius: 25px;
+}
+
+.card-holder{
+    padding: 15px;
+    margin: auto;
+    border: #000000 solid 1px;
+    border-radius: 25px;
+    background-color: #d8fa8a;
+    max-width: 94%;
+    height: 54vh;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    list-style: none;
+}
+
+.card{
+    border: #000000 1px solid;
+    border-radius: 25px;
+    width: 28vw;
+    height: 48vh;
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    width: 23vw;
+    height: 30vh;
+    background-color: #000000;    
+    border-radius: 25px;
+    margin: 5px;
+}
+
+.head{
+    margin: 5px;
+    font-size: 25px;
+}
+
+.desc{
+    margin: 5px;
+    overflow-y: auto;
+}
+
+.submit{
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .data {
+        flex-direction: column;
+    }
+
+    .title-section {
+        width: 100%;
+    }
+
+    .description-section {
+        width: 100%;
+    }
+
+    .file-selector {
+        width: 100%;
+    }
+
+    .card-holder{
+        max-width: 90%;
+        height: 100%;
+    }
+
+    .card{
+        width: 94%;
+        height: 100%;
+    }
+
+    .image{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .data {
+        flex-direction: column;
+    }
+
+    .title-section {
+        width: 100%;
+    }
+
+    .description-section {
+        width: 100%;
+    }
+
+    .file-selector {
+        width: 100%;
+    }
+
+    .card-holder{
+        max-width: 90%;
+        height: 100%;
+    }
+
+    .card{
+        width: 94%;
+        height: 100%;
+    }
+
+    .image{
+        width: 100%;
+        height: 50%;
+    }
+}
+
