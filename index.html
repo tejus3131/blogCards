@@ -8,29 +8,55 @@
     <title>Blog Cards</title>
 </head>
 <body>
-    <nav class="navbar">
-        <h1>Blog Cards</h1>
-        <input placeholder="Search" type="text" onchange="search()" class="search" />
-    </nav>
-    <div class="data">
-        <div class="title-section">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" class="data-input">
-        </div>
-        <div class="description-section">
-            <label for="description">Description</label>
-            <input type="text" name="description" id="description" class="data-input">
-        </div>
-        <label class="label">
-            <input type="file" id="source" required/>
-            <span>Select a file</span>
-          </label>
-
-        <button class="submit" id="add-card">Add Card</button>
-
+    <div id="bg">
+        <nav class="navbar">
+            <h1>Blog Cards</h1>
+            <button class="add" id="add">Add Card</button>
+        </nav>
+        
+    
+        <ul class="card-holder" id="card-holder">
+            <h1 id="head" class="show">No blogs Added yet</h1>
+        </ul>
     </div>
 
-    <ul class="card-holder" id="card-holder"></ul>
+    <dialog id="favDialog" class="dialog dialog-design">
+        <form method="dialog">
+          <section class="dialog_in">
+            <p>Please fill all details</p>
+          </section>
+          <menu>
+            <button value="cancel" formmethod="dialog" class="dialog_btn" onclick="close_error()">OK</button>
+          </menu>
+        </form>
+      </dialog>
+
+    <dialog id="cardDialog" class="dialog-add">
+        <form method="dialog" class="data">
+            <div class="section">
+                <label for="title" class="textlabel">Title</label>
+                <input type="text" name="title" id="title" class="data-input">
+            </div>
+            <div class="section">
+                <label for="description" class="textlabel">Description</label>
+                <input type="text" name="description" id="description" class="data-input">
+            </div>
+            <div class="section">
+                <label for="description" class="textlabel">Link</label>
+                <input type="text" name="link" id="link" class="data-input">
+            </div>
+            <div class="buttons">
+
+                <label class="label btn">
+                    <input type="file" id="source"/>
+                    <span id="fileName">Select a file</span>
+                  </label>
+        
+                <button class=" btn" id="add-card">Add Card</button>
+            </div>
+    
+        </form>
+    </dialog>
 
     <script src="index.js"></script>
 </body>

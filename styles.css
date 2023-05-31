@@ -11,40 +11,31 @@
     background-color: #d8fa8a;
 }
 
-.search {
-    background-color: #f4f4f4;
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 5px 10px;
-}
-
 .data {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 2%;
     border: #000000 1px solid;
     border-radius: 25px;
     background-color: #d8fa8a;
     padding: 15px;
+    width: 80vw;
 }
 
-.title-section {
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.section {
     display: flex;
     flex-direction: column;
-    width: 17%;
-
-}
-
-.description-section {
-    display: flex;
-    flex-direction: column;
-    width: 59%;
-}
-
-.file-selector {
-    width: 17%;
-
+    width: 100%;
+    align-items: center;
+    margin: 10px auto;
 }
 
 label.label input[type="file"] {
@@ -84,27 +75,27 @@ label.label input[type="file"] {
     padding: 5px 10px;
     border: 1px #000000 solid;
     border-radius: 25px;
+    width: 70vw;
 }
 
 .card-holder{
     padding: 15px;
-    margin: auto;
+    margin: 20px auto;
     border: #000000 solid 1px;
     border-radius: 25px;
-    background-color: #d8fa8a;
     max-width: 94%;
-    height: 54vh;
+    height: 80.5vh;
     overflow-y: auto;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     list-style: none;
 }
 
 .card{
     border: #000000 1px solid;
     border-radius: 25px;
-    width: 28vw;
-    height: 48vh;
+    width: 20vw;
+    height: 50vh;
     background-color: #f4f4f4;
     margin: 10px;
     padding: 10px;
@@ -115,7 +106,7 @@ label.label input[type="file"] {
 }
 
 .image{
-    width: 23vw;
+    width: 19vw;
     height: 30vh;
     background-color: #000000;    
     border-radius: 25px;
@@ -141,71 +132,88 @@ label.label input[type="file"] {
     margin-top: 15px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .data {
-        flex-direction: column;
-    }
-
-    .title-section {
-        width: 100%;
-    }
-
-    .description-section {
-        width: 100%;
-    }
-
-    .file-selector {
-        width: 100%;
-    }
-
-    .card-holder{
-        max-width: 90%;
-        height: 100%;
-    }
-
-    .card{
-        width: 94%;
-        height: 100%;
-    }
-
-    .image{
-        width: 100%;
-        height: 50%;
-    }
+.submit:hover {
+    background: #5cbd95;
 }
 
-
-
-@media only screen and (max-width: 800px) {
-    .data {
-        flex-direction: column;
-    }
-
-    .title-section {
-        width: 100%;
-    }
-
-    .description-section {
-        width: 100%;
-    }
-
-    .file-selector {
-        width: 100%;
-    }
-
-    .card-holder{
-        max-width: 90%;
-        height: 100%;
-    }
-
-    .card{
-        width: 94%;
-        height: 100%;
-    }
-
-    .image{
-        width: 100%;
-        height: 50%;
-    }
+.textlabel{
+    margin: 5px;
+    margin-left: 10px;
 }
 
+.dialog{
+    padding: 40px;
+    margin: auto;
+}
+
+.dialog-add{
+    margin: auto;
+    border: transparent 0px solid;
+    background-color: transparent;
+    width: 90vw;
+}
+
+.dialog-design{
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.dialog_in{
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.dialog_btn{
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.blur{
+    filter: blur(5px);
+}
+
+.btn{
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #5cbd95;
+}
+
+.btn:active {
+    background: #9fa1a0;
+}
+
+.add{
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.add:hover {
+    background: #5cbd95;
+}
+
+.add:active {
+    background: #9fa1a0;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
