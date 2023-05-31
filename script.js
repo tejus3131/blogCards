@@ -52,6 +52,7 @@ function addNewCard() {
         toggle_error();
         return;
     }
+    console.log(source.value)
     const img = window.URL.createObjectURL(file);
     const cardItem = document.createElement('li');
     cardHolder.classList.add('card-item');
