@@ -11,12 +11,20 @@ const add = document.querySelector('#add');
 const addDialog = document.querySelector('#cardDialog');
 const head = document.querySelector('#head');
 
+document.addEventListener('keyup', function (event) {
+    if (event.key == "Escape") {
+        bg.classList.remove("blur");
+        dialog.close();
+        addDialog.close();
+    }
+})
+
+
 var blogs = 0;
 
 function toggle_error() {
     dialog.showModal();
     bg.classList.add("blur");
-
 }
 
 function newCard() {
@@ -58,12 +66,14 @@ function addNewCard() {
     cardHolder.classList.add('card-item');
     cardItem.innerHTML = `
         <div class="card" id="${index}">
-            <img name="image" class="image" src="${img}" />
-            <label for="image" class="head"><strong>${title}</strong></label>
-            <label for="image" class="desc">${desc}</label>
-            <div class="commands">
-                <button class="btn delete" data-index="${index}">Delete</button>
-                <button class="btn" type="button" onclick="window.open('${link}', '_blank')" >check</button>
+            <img name="image" class="cardimage" src="${img}" />
+            <div class="detail">
+                <label for="image" class="cardtitle"><strong>${title}</strong></label>
+                <label for="image" class="cardtext">${desc}</label>
+                <div class="commands">
+                    <button class="cardCustomInput" type="button" onclick="window.open('${link}', '_blank')" >check</button>
+                    <button class="cardCustomInput delete" data-index="${index}">Delete</button>
+                </div>
             </div>
         </div>
         `;
@@ -81,7 +91,7 @@ function deleteCard(index) {
 
 addCardBtn.addEventListener('click', addNewCard);
 
-add.addEventListener('click', newCard);
+
 
 cardHolder.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete')) {
@@ -104,6 +114,7 @@ function reset() {
     cardLink.value = "";
     filedata.innerHTML = `Select Image`;
     addDialog.close()
+    dialog.close()
     bg.classList.remove("blur");
     if (blogs == 0) {
         head.classList.add("show")
@@ -116,13 +127,6 @@ function reset() {
 
 }
 
-document.addEventListener('keyup', function (event) {
-    if (event.key == "Escape") {
-        dialog.close();
-        addDialog.close();
-        bg.classList.remove("blur");
-    }
-})
 
 reset();
 

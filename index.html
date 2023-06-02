@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Blog Cards</title>
+    <title>Document</title>
 </head>
+
 <body>
     <div id="bg">
-        <nav class="navbar">
-            <h1>Blog Cards</h1>
-            <button class="add" id="add">Add Card</button>
+        <nav class="navbar" id="navbar">
+            <a href="/blogCards" class="links">
+                <img src="https://grenwykladziny.pl/wp-content/uploads/2016/12/blog-logo.png" alt="Blog" class="image">
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <Button type="button" class="addCardButton" id="add" onclick="newCard()">Add New Blog</Button>
+                </li>
+                <!-- <li>
+                    <input type="text" placeholder="Search" class="customInput">
+                </li> -->
+            </ul>
         </nav>
-        
-    
         <ul class="card-holder" id="card-holder">
-            <h1 id="head" class="show">No blogs Added yet</h1>
+            <div class="no_blogs" id="head">
+                <img src="/blogCards/No_Blogs.jpg" class="noBlogImage"/>
+                <button type="button" class="addCardButtonMain" id="add" onclick="newCard()">No Blogs Available.<br>Add Your First Blog.</Button>
+            </div>
         </ul>
+        <footer class="foot">
+            <p>
+                Made with ❤️ by <a href="https://tejus3131.github.io/" class="foot-text">
+                    Tejus Gupta
+                </a>
+            </p>
+        </footer>
     </div>
+    <dialog id="cardDialog" class="shadow">
+        <form method="dialog" class="cardForm">
+            <div class="section">
+                <input placeholder="Enter Title" type="text" name="title" id="title" class="customInput cardWidth">
+                <input placeholder="Enter Description" type="text" name="description" id="description"
+                    class="customInput cardWidth">
+                <input placeholder="Enter Link" type="text" name="link" id="link" class="customInput cardWidth">
+                <div class="buttons">
 
-    <dialog id="favDialog" class="dialog dialog-design">
+                    <label class="label customInput cardWidth">
+                        <input type="file" id="source" class="" />
+                        <span id="fileName">Select a file</span>
+                    </label>
+                    <div class="command">
+                        <button class="customInput btn" id="add-card">Add Card</button>
+                        <button class="customInput btn" id="cancel-card"
+                            onclick="reset();bg.classList.remove('blur')">Cancel</button>
+                    </div>
+                </div>
+        </form>
+    </dialog>
+    <dialog id="favDialog" class="dialog-design">
         <form method="dialog">
-          <section class="dialog_in">
+          <section class="dialog_in" style="margin: 20px 0px;">
             <p>Please fill all details</p>
           </section>
           <menu>
-            <button value="cancel" formmethod="dialog" class="dialog_btn" onclick="close_error()">OK</button>
+            <button value="cancel" formmethod="dialog" class="customInput btn" onclick="close_error()">OK</button>
           </menu>
         </form>
       </dialog>
-
-    <dialog id="cardDialog" class="dialog-add">
-        <form method="dialog" class="data">
-            <div class="section">
-                <label for="title" class="textlabel">Title</label>
-                <input type="text" name="title" id="title" class="data-input">
-            </div>
-            <div class="section">
-                <label for="description" class="textlabel">Description</label>
-                <input type="text" name="description" id="description" class="data-input">
-            </div>
-            <div class="section">
-                <label for="description" class="textlabel">Link</label>
-                <input type="text" name="link" id="link" class="data-input">
-            </div>
-            <div class="buttons">
-
-                <label class="label btn">
-                    <input type="file" id="source"/>
-                    <span id="fileName">Select a file</span>
-                  </label>
-        
-                <button class=" btn" id="add-card">Add Card</button>
-            </div>
-    
-        </form>
-    </dialog>
-
     <script src="script.js"></script>
 </body>
+
 </html>

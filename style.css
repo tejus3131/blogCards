@@ -1,33 +1,136 @@
 * {
-    padding: 0%;
     margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #ffffff;
 }
 
 .navbar {
     display: flex;
+    flex-direction: row;
+    background-color: #000000;
     justify-content: space-between;
-    padding: 15px;
-    border-bottom: 1px solid black;
-    background-color: #d8fa8a;
+    align-items: center;
+    padding: 0px 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
 }
 
-.data {
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.addCardButton {
+    margin: 20px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 25px;
+    color: black;
+    background-color: #1e9c79;
+    box-shadow: 1px 1px 1px rgba(30, 156, 121, 0.2);
+    transition: color 0.4s, box-shadow 0.4s, background-color 0.4s, border 0.4s;
+}
+
+.addCardButton:hover {
+    color: #1e9c79;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 20px rgba(30, 156, 121, 1);
+    border: none;
+}
+
+.customInput {
+    margin: 20px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 25px;
+    color: black;
+    background-color: #1e9c79;
+    box-shadow: 1px 1px 1px rgba(30, 156, 121, 0.2);
+    transition: color 0.4s, box-shadow 0.4s, background-color 0.4s, border 0.4s;
+}
+
+.customInput:hover {
+    color: #f4f4f4;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 20px rgba(30, 156, 121, 1);
+    border: none;
+}
+
+.customInput:focus {
+    color: #f4f4f4;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 20px rgba(30, 156, 121, 1);
+    border: none;
+}
+
+.customInput::placeholder {
+    color: #000000;
+    transition: all 0.4s;
+    margin: auto;
+}
+
+.customInput:hover::placeholder {
+    color: #1e9c79;
+}
+
+.customInput:focus::placeholder {
+    color: #1e9c79;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 6px;
+    box-shadow: 1px 1px 20px rgba(30, 156, 121, 0);
+    transition: box-shadow 0.3s;
+}
+
+.image:hover {
+    box-shadow: 1px 1px 20px rgba(30, 156, 121, 1);
+}
+
+#fileName {
+    color: #000000;
+}
+
+#fileName:hover {
+    color: #1e9c79;
+}
+
+#cardDialog {
+    margin: auto;
+    border: transparent;
+    border-radius: 25px;
+}
+
+.cardForm {
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2%;
-    border: #000000 1px solid;
-    border-radius: 25px;
-    background-color: #d8fa8a;
-    padding: 15px;
-    width: 80vw;
+    background-color: #000000;
+    color: #f4f4f4;
 }
 
-.buttons{
+.shadow {
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+label.label input[type="file"] {
+    position: absolute;
+    top: -1000px;
+}
+
+.buttons {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin: 10px;
 }
 
 .section {
@@ -38,182 +141,278 @@
     margin: 10px auto;
 }
 
-label.label input[type="file"] {
-    position: absolute;
-    top: -1000px;
+.blur {
+    filter: blur(6px);
+
 }
 
-.label {
-    cursor: pointer;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 5px 15px;
-    margin: 5px;
-    background: #f4f4f4;
-    display: inline-block;
-    margin-top: 15px;
+.cardWidth {
+    width: 30vw;
 }
 
-.label:hover {
-    background: #5cbd95;
+.btn {
+    width: 13vw;
 }
 
-.label:active {
-    background: #9fa1a0;
+.foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.label:invalid+span {
+.foot-text {
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+}
+
+.foot-text:hover {
+    color: #1e9c79;
+}
+
+.foot-text:link {
+    text-decoration: none;
+    color: #1e9c79;
+}
+
+.foot-text:visited {
+    text-decoration: none;
+    color: #1e9c79;
+}
+
+.noBlogImage {
+    width: 450px;
+    height: 450px;
+    border-radius: 45px;
+}
+
+.no_blogs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+#bg {
+    background-color: #ffffff;
     color: #000000;
 }
 
-.label:valid+span {
-    color: #ffffff;
+.addCardButtonMain {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: transparent;
+    border-radius: 5px;
+    color: black;
+    background-color: #1e9c9c76;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 3px rgba(30, 156, 120, 0.5);
 }
 
-.data-input{
-    background-color: #f4f4f4;
-    padding: 5px 10px;
-    border: 1px #000000 solid;
-    border-radius: 25px;
-    width: 70vw;
+.addCardButtonMain:hover {
+    color: #1e9c79;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 20px rgba(30, 156, 121, 1);
+    border: none;
 }
 
-.card-holder{
-    padding: 15px;
-    margin: 20px auto;
-    border: #000000 solid 1px;
-    border-radius: 25px;
-    max-width: 94%;
-    height: 80.5vh;
-    overflow-y: auto;
+.addCardButtonMain:focus {
+    color: #1e9c79;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 20px rgba(30, 156, 121, 1);
+    border: none;
+}
+
+.show {
     display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+.card-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     list-style: none;
 }
 
-.card{
-    border: #000000 1px solid;
-    border-radius: 25px;
-    width: 20vw;
-    height: 50vh;
-    background-color: #f4f4f4;
-    margin: 10px;
+
+.cardCustomInput {
+    width: 200px;
+    margin: 5px;
     padding: 10px;
+    border: transparent;
+    border-radius: 25px;
+    color: #f4f4f4;
+    background-color: #000000;
+    box-shadow: 3px 3px 1px #232121;
+    transition: color 0.4s, box-shadow 0.4s, background-color 0.4s, border 0.4s;
+}
+
+.cardCustomInput:hover {
+    color: #f4f4f4;
+    background-color: #1d1f1e;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    border: none;
+}
+
+.cardCustomInput:focus {
+    color: #f4f4f4;
+    background-color: #1d1f1e;
+    box-shadow: 1px 1px 20px rgb(0, 0, 0);
+    border: none;
+}
+
+
+
+.dialog-design {
+    margin: auto;
+    border: transparent;
+    border-radius: 25px;
+    background-color: #000000;
+    color: #f4f4f4;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.card {
+    margin: 20px;
+    padding: 10px;
+    border: #000000 solid 2px;
+    border-radius: 25px;
+    color: black;
+    background-color: #1e9c79;
+    box-shadow: 3px 3px 3px rgba(41, 47, 45, 1);
+    transition: box-shadow 150ms, border 150ms;
+    width: 500px;
+    height: 250px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
 }
 
-.image{
-    width: 19vw;
-    height: 30vh;
-    background-color: #000000;    
-    border-radius: 25px;
-    margin: 5px;
+.commands {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 92px;
 }
 
-.head{
-    margin: 5px;
-    font-size: 25px;
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+    justify-content: center;
 }
 
-.desc{
-    margin: 5px;
+.cardtitle {
+    height: 18px;
+    width: 200px;
+    font-size: large;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+.cardtext {
+    height: 90px;
+    width: 200px;
     overflow-y: auto;
-}
-
-.submit{
-    background-color: #f4f4f4;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px;
-    margin-top: 15px;
-}
-
-.submit:hover {
-    background: #5cbd95;
-}
-
-.textlabel{
-    margin: 5px;
-    margin-left: 10px;
-}
-
-.dialog{
-    padding: 40px;
-    margin: auto;
-}
-
-.dialog-add{
-    margin: auto;
-    border: transparent 0px solid;
-    background-color: transparent;
-    width: 90vw;
-}
-
-.dialog-design{
-    background-color: #f4f4f4;
-    border: 1px solid black;
-    border-radius: 25px;
-}
-
-.dialog_in{
-    margin: 10px auto;
+    overflow-x: hidden;
     padding: 10px;
-    border-radius: 25px;
-    width: 100%;
-}
-
-.dialog_btn{
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    width: 100%;
-}
-
-.blur{
-    filter: blur(5px);
-}
-
-.btn{
-    background-color: #f4f4f4;
-    border: 1px solid black;
+    color: #48b395;
+    border: 1px #000000 solid;
+    background-color: #000000;
     border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.btn:hover {
-    background: #5cbd95;
+.card:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    border: 1px #000000 solid;
 }
 
-.btn:active {
-    background: #9fa1a0;
+.cardimage {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    box-shadow: 1px 1px 20px rgb(0, 0, 0);
+    transition: box-shadow 0.3s;
 }
 
-.add{
-    background-color: #f4f4f4;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px;
-}
 
-.add:hover {
-    background: #5cbd95;
-}
 
-.add:active {
-    background: #9fa1a0;
-}
+@media screen and (max-width: 600px) {
+    .card{
+        flex-direction: column;
+        width: 60vw;
+        height: 500px;
+    }
 
-.show{
-    display: block;
-}
+    .addCardButtonMain {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
 
-.hide{
-    display: none;
+    .commands {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cardWidth {
+        width: 80vw;
+    }
+
+    .btn {
+        width: 60vw;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        margin-top: 0px;
+    }
+
+    .addCardButton {
+        width: 40vw;
+    }
+
+    .customInput {
+        width: 39vw;
+    }
+
+    .buttons{
+        flex-direction: column;
+        justify-content: center;
+    }
 }
