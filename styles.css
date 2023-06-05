@@ -356,18 +356,12 @@ label.label input[type="file"] {
     height: 200px;
     margin: 10px;
     box-shadow: 1px 1px 20px rgb(0, 0, 0);
-    transition: box-shadow 0.3s;
-}
-
-
-
+    transition: box-shadow 0.3s;}
 @media screen and (max-width: 600px) {
     .card{
         flex-direction: column;
         width: 60vw;
-        height: 500px;
-    }
-
+        height: 500px;}
     .addCardButtonMain {
         padding: 10px 20px;
         font-size: 15px;
